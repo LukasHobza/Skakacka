@@ -3,6 +3,10 @@ import sqlite3
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return "Skóre server běží! 🏁"
+
 # inicializace databáze
 def init_db():
     conn = sqlite3.connect('skore.db')
